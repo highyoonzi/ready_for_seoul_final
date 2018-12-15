@@ -1,0 +1,10 @@
+<a href="/"><h1>READY FOR SEOUL</h1></a>
+<h1>qna list</h1>
+
+<a href="/qna/add">질문 쓰기</a>
+<br>
+
+
+<% for(var i=0;i < qna.length; i++) { %>
+<a href="/qna/<%= qna[i].id %>" ><%= qna[i].text %> <%= qna[i].inserted %> <br></a>
+<% } %>
