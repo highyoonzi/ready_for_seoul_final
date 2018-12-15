@@ -17,14 +17,15 @@ module.exports = function(app, conn){
 			}
 		})
 	})
-	
+
 	router.get('/add', (req, res) => {
 		res.render('qna/add')
 	})
 	router.post('/add', (req, res) => {
+		var title = req.body.title;
 		var text = req.body.text;
-		var sql = 'INSERT INTO qna (`text`, `inserted`, `updated`) VALUES(?, now(), now())';
-		conn.query(sql, [text], function(err, result, fields){
+		var sql = 'INSERT INTO qna (`title`, `text`, `inserted`, `updated`) VALUES(?, ?, now(), now())';
+		conn.query(sql, [title, text], function(err, result, fields){
 			if(err){
 				console.log(err);
 				res.status(500).send('Internal Server Error: ' + err)
@@ -77,6 +78,6 @@ module.exports = function(app, conn){
 		})
 		res.redirect('/qna')
 	})
-	
+
 	return router
 }
