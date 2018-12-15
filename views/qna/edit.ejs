@@ -89,14 +89,14 @@
         </center>
       </div>
     </div>
-    
+
     <div class="container">
           <h2>QnA</h2>
           <hr align="center" style="border:solid 0.5px black; width: 99%">
         </div>
 
 <div class="container">
-<form method="post" enctype="multipart/form-data">
+<form method="post" action="/qna/<%= qna.id %>/edit">
 
 
 <div class="form-group" style=margin-bottom:50px;>
@@ -107,7 +107,7 @@
 
 <div class="form-group" style=margin-bottom:50px;>
   <label for="inputDesc">문의 내용</label>
-  <textarea class="form-control" rows="10" cols="80" id="inputDesc" name="desc" placeholder="문의하실 내용을 작성해주세요."><%= qna.desc %></textarea>
+  <textarea class="form-control" rows="10" cols="80" id="inputDesc" name="text" placeholder="문의하실 내용을 작성해주세요."><%= qna.text %></textarea>
 </div>
 
 
