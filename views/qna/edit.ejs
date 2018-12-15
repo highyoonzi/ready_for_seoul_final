@@ -1,10 +1,117 @@
-<a href="/"><h1>READY FOR SEOUL</h1></a>
 
-<h1>qna edit</h1>
+<!doctype html>
+  <html lang="en">
+  <head>
+        <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<form action="/qna/<%= qna.id %>/edit" method="post">
-<input type="text" name="title" value="<%= qna.title %>"><br>
-<textarea name="text" rows="8" cols="80"><%= qna.text %></textarea>
-<br>
-<button type="submit" name="button">수정</button>
+
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+          <title>READY FOR SEOUL</title>
+      <style>
+      #header{
+          text-align: center;
+          background-color: #323c73;
+          padding: 25px;
+          color: white;
+          /* 따라다니는거 */
+
+          width:100%;
+      }
+      #header>h1{
+        font-style: italic;
+      }
+      #signup, #signin{
+        width:100px;
+          position: absolute;
+          right:30px;
+          top:20px;
+          border:2px solid white;
+          color:white;
+      }
+      #signin{
+                 top:60px;
+               font-style: 나눔스퀘어 Bold;
+
+              }
+
+      .justify-content-md-center{
+        margin-top:10px;
+      }
+      .box{
+          margin: 2px;
+          margin-left:30px;
+          margin-right:30px;
+          border:2px solid black;
+          width:100px;
+          padding-left: 25px;
+          padding-right: 25px;
+          padding-top: 5px;
+          padding-bottom: 5px;}
+
+          a{
+       color:black
+      }
+
+</style>
+</head>
+
+<body>
+   <div id="header">
+   <h1>
+     <b>READY FOR SEOUL</b>
+  </h1>
+    <a href="/account/signup"><div id="signup"> SIGN UP</div></a>
+    <a href="/account/login"><div id="signin"> SIGN IN </div></a>
+   </div>
+
+   <div class="row justify-content-md-center" style="margin-bottom: 1%">
+
+
+      <div class="shop" style="height: auto; width: 10%; border:2px solid black;">
+      <center>
+      <font face="나눔스퀘어 Bold" size="5em">
+          <a href="/shop">
+          SHOP
+          </a>
+        </font>
+      </center>
+      </div>
+      <div class="qna" style="height: auto; width: 10%; border:2px solid black; margin-left:100px">
+        <center>
+          <font face="나눔스퀘어 Bold" size="5em">
+            <a href="/qna">
+            QnA
+          </a>
+          </font>
+        </center>
+      </div>
+    </div>
+    
+    <div class="container">
+          <h2>QnA</h2>
+          <hr align="center" style="border:solid 0.5px black; width: 99%">
+        </div>
+
+<div class="container">
+<form method="post" enctype="multipart/form-data">
+
+
+<div class="form-group" style=margin-bottom:50px;>
+<label for="inputTitle">제목</label>
+<input type="text" name="title" class="form-control" id="inputTitle" aria-describedby="inputTitle" placeholder="제목을 입력해주세요." value="<%= qna.title %>">
+</div>
+
+
+<div class="form-group" style=margin-bottom:50px;>
+  <label for="inputDesc">문의 내용</label>
+  <textarea class="form-control" rows="10" cols="80" id="inputDesc" name="desc" placeholder="문의하실 내용을 작성해주세요."><%= qna.desc %></textarea>
+</div>
+
+
+    <button type="submit" class="btn btn-secondary">수정하기</button>
+  <a href="/qna" class="btn btn-secondary">취소</a>
 </form>
+</div>
