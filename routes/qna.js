@@ -53,14 +53,35 @@ module.exports = function(app, conn){
 	})
 
 	router.get('/:id/edit', (req, res) => {
-		res.render('qna/edit', {
-			'message': req.params.id
+		var id = req.params.id;
+		var sql = 'SELECT * FROM qna WHERE id=?';
+		conn.query(sql, [id], function(err, qnas, fields){
+			if(err){
+					console.log(err);
+					res.status(500).send('Internal Server Error: ' + err);
+			}
+			else{
+				res.render('qna/edit', {
+					qna: qnas[0]
+				})
+			}
 		})
 	})
 
-	/* 아직 미구현 */
 	router.post('/:id/edit', (req, res) => {
-		res.redirect('/qna' + req.params.id)
+		var id = req.params.id;
+		var title = req.body.title;
+		var text = req.body.text;
+		var sql = 'UPDATE qna SET `title` = ?, `text` = ?, `updated` = now() WHERE id=?';
+		conn.query(sql, [title, text, id], function(err, result, fields){
+			if(err){
+				console.log(err);
+				res.status(500).send('Internal Server Error: ' + err);
+			}
+			else{
+				res.redirect('/qna/' + id)
+			}
+		})
 	})
 
 

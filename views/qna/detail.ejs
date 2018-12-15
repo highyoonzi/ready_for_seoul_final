@@ -1,9 +1,10 @@
 <a href="/"><h1>READY FOR SEOUL</h1></a>
 
 <h1>qna detail</h1>
-<h3><%= id %>th question </h3>
+
 <h3><%= qna.title %></h3>
 
-<h3><%= qna.text %></h3>
+<p><%= qna.text %></p>
 <p><%= qna.inserted %></p>
 <a href="/qna/<%= qna.id %>/delete">삭제</a>
+<a href="/qna/<%= qna.id %>/edit">수정</a>
