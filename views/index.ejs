@@ -25,11 +25,12 @@
             }
             #signup, #signin{
               width:100px;
-          position: fixed;
+          position: absolute;
                 right:30px;
                 top:20px;
                 border:2px solid white;
                 font-style: 나눔스퀘어 Bold;
+                  color:white;
             }
             #signin{
               top:60px;
@@ -45,6 +46,9 @@
        margin-bottom: 30px;
        position: fixed;
       }
+      a{
+        color:black
+      }
       </style>
   </head>
 
@@ -53,18 +57,33 @@
   <h1>
     <b>READY FOR SEOUL</b>
   </h1>
-  <div id="signup"> SIGN UP</div>
-  <div id="signin"> SIGN IN </div>
+  <a href="/account/signup"><div id="signup"> SIGN UP</div></a>
+  <a href="/account/login"><div id="signin"> SIGN IN </div></a>
  </div>
 <div class="row justify-content-md-center" style="margin-bottom: 1%">
-            <div class="shop" style="height: auto; width: 10%; border:2px solid black;"><center>
-              <font face="나눔스퀘어 Bold" size="5em">SHOP</font></div>
-            <div class="qna" style="height: auto; width: 10%; border:2px solid black; margin-left:100px"><center>
-                <font face="나눔스퀘어 Bold" size="5em">QnA</font></div>
+
+  <div class="shop" style="height: auto; width: 10%; border:2px solid black;">
+  <center>
+    <font face="나눔스퀘어 Bold" size="5em">
+      <a href="/shop">
+      SHOP
+      </a>
+    </font>
+  </center>
+  </div>
+  <div class="qna" style="height: auto; width: 10%; border:2px solid black; margin-left:100px">
+    <center>
+      <font face="나눔스퀘어 Bold" size="5em">
+        <a href="/qna">
+        QnA
+      </a>
+      </font>
+    </center>
+  </div>
 </div>
 
 
-<img src="bg3.png" style='height: 100%; width: 100%; object-fit: contain'>
+<img src="static/bg3.png" style='height: 100%; width: 100%; object-fit: contain'>
 <div class="container-fluid">
 </div>
 
@@ -87,14 +106,14 @@
 <div class="row" style="margin-bottom:30px;" >
   <div class="col-md-3 col-lg-2">
   <div class="card" id="card1">
-  <center><img src="침구류.png" width="155" height="155"></center>
+  <center><img src="static/침구류.png" width="155" height="155"></center>
    <p class="card-title"><center><b>침구류</b></center></p>
                 </div>
                    </div>
 
             <div class="col-md-3 col-lg-2">
             <div class="card" id="card2">
-            <center><img src="쓰레기통.png" width="155" height="155"></center>
+            <center><img src="static/쓰레기통.png" width="155" height="155"></center>
                    <p class="card-title"><center><b>쓰레기통</b></center></p>
                    </div>
                    </div>
@@ -102,28 +121,28 @@
 
              <div class="col-md-3 col-lg-2">
              <div class="card" id="card3">
-          <center><img src="옷걸이.png" width="155" height="155"></center>
+          <center><img src="static/옷걸이.png" width="155" height="155"></center>
                              <p class="card-title"><center><b>옷걸이 10pcs</b></center></p>
                          </div>
                        </div>
 
               <div class="col-md-3 col-lg-2">
               <div class="card" id="card4">
-            <center>  <img src="슬리퍼.png" width="155" height="155"> </center>
+            <center>  <img src="static/슬리퍼.png" width="155" height="155"> </center>
                                <p class="card-title"><center><b>욕실슬리퍼</b></center></p>
                 </div>
                 </div>
 
                 <div class="col-md-3 col-lg-2">
                 <div class="card" id="card5">
-                <center><img src="바구니.png" width="155" height="155"></center>
+                <center><img src="static/바구니.png" width="155" height="155"></center>
                  <p class="card-title"><center><b>목욕바구니</b></center></p>
                                  </div>
                         </div>
 
                         <div class="col-md-3 col-lg-2">
                         <div class="card" id="card6">
-                        <center><img src="수건.png" width="155" height="155"></center>
+                        <center><img src="static/수건.png" width="155" height="155"></center>
                          <p class="card-title"><center><b>수건 5pcs</b></center></p>
                                          </div>
                                 </div>
@@ -135,7 +154,7 @@
   <br>
 <div class="row justify-content-md-center" style="margin-bottop:100px;">
 <div class="col col-lg-6" id="abc" style=" padding-top:1%; padding-bottom: 1%; border:2px solid; color:white; background: #323C73;">
-<center><font face="나눔스퀘어 Bold">상세보기</font></center></div>
+<center><font face="나눔스퀘어 Bold"><a href="/shop" style="color:white;">상세보기</a></font></center></div>
 </div>
 <br>
 <br>
