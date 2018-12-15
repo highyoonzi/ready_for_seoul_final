@@ -68,6 +68,7 @@ module.exports = function(app, conn){
 		})
 	})
 
+	/* 수정 */
 	router.post('/:id/edit', (req, res) => {
 		var id = req.params.id;
 		var title = req.body.title;
