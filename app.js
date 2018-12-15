@@ -14,6 +14,8 @@ app.use(function(req, res, next) {
   next();
 });
 
+app.locals.moment = require('moment');
+
 /* Database */
 var mysql = require('mysql');
 var conn = mysql.createConnection({
