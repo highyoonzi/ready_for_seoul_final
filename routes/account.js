@@ -85,9 +85,7 @@ module.exports = function(app, conn){
 								console.log(err);
 								res.status(500).send('Internal Server Error');
 							}
-								res.render('index', {
-								user: users[0]
-							});
+								res.redirect('/')
 						});
 					}
 
