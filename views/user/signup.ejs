@@ -33,8 +33,17 @@
   color:white;
 
   }
-
-
+  #footer{
+      background-color:#323C73;
+      text-align: center;
+      color:white;
+      padding-top:20px;
+      padding-bottom:20px;
+  }
+  input.form-control{
+    width:200px;
+    display:inline-block;
+  }
   </style>
 
   </head>
@@ -62,17 +71,17 @@
 
 <br>
 <form action="/account/signup" method="POST">
-  <center><div style="border-color: #323C73; border-width: medium; width: 380px; height: 430px; border-style: inset;"> <center>
+  <center><div style="border-color: #323C73; border-width: medium; width: 380px; height: 480px; border-style: inset;"> <center>
     <br>
-    <p><font size="4em" face="210 나무고딕 B"> Email : </font><input type="text" name="email"></p>
+    <p><font size="4em" face="210 나무고딕 B"> Email : </font><input class="form-control" type="text" name="email"></p>
     <br>
-    <p><font size="4em" face="210 나무고딕 B"> Username : </font><input type="text" name="username"></p>
+    <p><font size="4em" face="210 나무고딕 B"> Username : </font><input class="form-control" type="text" name="username"></p>
     <br>
-    <p><font size="4em" face="210 나무고딕 B"> Password: </font><input type="password" name="password"></p>
+    <p><font size="4em" face="210 나무고딕 B"> Password: </font><input class="form-control" type="password" name="password"></p>
     <br>
-    <p><font size="4em" face="210 나무고딕 B"> Address : </font><input type="text" name="address"></p>
+    <p><font size="4em" face="210 나무고딕 B"> Address : </font><input class="form-control" type="text" name="address"></p>
     <br>
-    <p><font size="4em" face="210 나무고딕 B"> Birth date : </font><input type="text" name="birth_date"></p>
+    <p><font size="4em" face="210 나무고딕 B"> Birth date : </font><input class="form-control" type="text" name="birth_date"></p>
     <br>
     <button type="submmit"> signup </button>
     <br>
@@ -90,15 +99,11 @@
 <br>
 <br>
 
-<div class="container-fluid" style="background-color:  #323C73" style="width="100%>
-  <p><b><i><center>
-   <font size="2em">
-       <font color=white>
-         READY FOR SEOUL
-         <br>Web ver 1.0 </font></p>
-   </font>
- </center></i></b></p>
-  </div>
+<div id="footer">
+READY FOR SEOUL <br>
+Web ver 1.0
+</div>
+
 
  </body>
  </html>
